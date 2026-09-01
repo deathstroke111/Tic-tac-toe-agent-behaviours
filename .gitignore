@@ -1,0 +1,14 @@
+.DS_Store
+
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Game logs
+src/game_logs/
+
+# MCTS agent data
+src/agents/mcts_agent/mcts_data/
