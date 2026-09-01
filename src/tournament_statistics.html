@@ -65,48 +65,88 @@
     <div class="tabs">
       <button class="tabbtn active" data-tab="summary">Summary</button>
       <button class="tabbtn" data-tab="games">Games</button>
-      <button class="tabbtn" data-tab="trend">Win Ratio Trend</button>
+      <button class="tabbtn" data-tab="trend">Rolling Win Ratio</button>
     </div>
 
     <section id="summary" class="tab active">
       <div class="grid cards">
-        <div class="card"><div class="label">Games</div><div class="value">100</div></div>
-        <div class="card"><div class="label">Matchups</div><div class="value">1</div></div>
-        <div class="card"><div class="label">Agents</div><div class="value">2</div></div>
-        <div class="card"><div class="label">Draws</div><div class="value">31</div></div>
+        <div class="card"><div class="label">Games</div><div class="value">90</div></div>
+        <div class="card"><div class="label">Matchups</div><div class="value">3</div></div>
+        <div class="card"><div class="label">Agents</div><div class="value">4</div></div>
+        <div class="card"><div class="label">Draws</div><div class="value">8</div></div>
       </div>
       <h2>Matchups</h2>
       <div class="grid cards">
                 <div class="card">
                   <div class="label">Matchup</div>
-                  <div class="value">tom vs jerry</div>
-                  <div class="small">tom plays X, jerry plays O</div>
-                  <div class="small">Games: 100</div>
-                  <div class="small">tom wins: 53</div>
-                  <div class="small">jerry wins: 16</div>
-                  <div class="small">Draws: 31</div>
+                  <div class="value">Q-learning vs Random</div>
+                  <div class="small">qbert plays X, randy plays O</div>
+                  <div class="small">Games: 30</div>
+                  <div class="small">qbert wins: 20</div>
+                  <div class="small">randy wins: 7</div>
+                  <div class="small">Draws: 3</div>
+                </div>
+                
+                <div class="card">
+                  <div class="label">Matchup</div>
+                  <div class="value">SARSA vs Random</div>
+                  <div class="small">sally plays X, randy plays O</div>
+                  <div class="small">Games: 30</div>
+                  <div class="small">sally wins: 17</div>
+                  <div class="small">randy wins: 9</div>
+                  <div class="small">Draws: 4</div>
+                </div>
+                
+                <div class="card">
+                  <div class="label">Matchup</div>
+                  <div class="value">MCTS vs Random</div>
+                  <div class="small">tom plays X, randy plays O</div>
+                  <div class="small">Games: 30</div>
+                  <div class="small">tom wins: 28</div>
+                  <div class="small">randy wins: 1</div>
+                  <div class="small">Draws: 1</div>
                 </div>
                 </div>
       <h2>Agent Totals</h2>
       <div class="grid cards">
                 <div class="card">
                   <div class="label">Agent</div>
-                  <div class="value">jerry</div>
-                  <div class="small">Games: 100</div>
-                  <div class="small">Wins: 16</div>
-                  <div class="small">Losses: 53</div>
-                  <div class="small">Draws: 31</div>
-                  <div class="small">Score: -37</div>
+                  <div class="value">qbert</div>
+                  <div class="small">Games: 30</div>
+                  <div class="small">Wins: 20</div>
+                  <div class="small">Losses: 7</div>
+                  <div class="small">Draws: 3</div>
+                  <div class="small">Score: 13</div>
+                </div>
+                
+                <div class="card">
+                  <div class="label">Agent</div>
+                  <div class="value">randy</div>
+                  <div class="small">Games: 90</div>
+                  <div class="small">Wins: 17</div>
+                  <div class="small">Losses: 65</div>
+                  <div class="small">Draws: 8</div>
+                  <div class="small">Score: -48</div>
+                </div>
+                
+                <div class="card">
+                  <div class="label">Agent</div>
+                  <div class="value">sally</div>
+                  <div class="small">Games: 30</div>
+                  <div class="small">Wins: 17</div>
+                  <div class="small">Losses: 9</div>
+                  <div class="small">Draws: 4</div>
+                  <div class="small">Score: 8</div>
                 </div>
                 
                 <div class="card">
                   <div class="label">Agent</div>
                   <div class="value">tom</div>
-                  <div class="small">Games: 100</div>
-                  <div class="small">Wins: 53</div>
-                  <div class="small">Losses: 16</div>
-                  <div class="small">Draws: 31</div>
-                  <div class="small">Score: 37</div>
+                  <div class="small">Games: 30</div>
+                  <div class="small">Wins: 28</div>
+                  <div class="small">Losses: 1</div>
+                  <div class="small">Draws: 1</div>
+                  <div class="small">Score: 27</div>
                 </div>
                 </div>
     </section>
@@ -128,129 +168,129 @@
         <tbody>
                 <tr>
                   <td>1</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
                   <td>-1</td>
+                  <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>2</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
                   <td>-1</td>
                   <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>3</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>4</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>5</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>6</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>7</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
-                  <td>-1</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>Draw</td>
+                  <td>+0</td>
+                  <td>+0</td>
                 </tr>
                 
                 <tr>
                   <td>8</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>9</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>10</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>11</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
+                  <td>-1</td>
+                  <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>12</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>13</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
                   <td>Draw</td>
                   <td>+0</td>
                   <td>+0</td>
@@ -258,409 +298,409 @@
                 
                 <tr>
                   <td>14</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
-                  <td>-1</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>Draw</td>
+                  <td>+0</td>
+                  <td>+0</td>
                 </tr>
                 
                 <tr>
                   <td>15</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>16</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
                   <td>-1</td>
+                  <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>17</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>18</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>19</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>20</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
                   <td>-1</td>
                   <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>21</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>22</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>23</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>24</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>25</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>26</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>27</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
+                  <td>-1</td>
+                  <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>28</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
                   <td>-1</td>
+                  <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>29</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>30</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
+                  <td>Q-learning vs Random</td>
+                  <td>qbert (X)</td>
+                  <td>randy (O)</td>
+                  <td>qbert</td>
                   <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>31</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>32</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
-                  <td>-1</td>
-                </tr>
-                
-                <tr>
-                  <td>33</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
                   <td>Draw</td>
                   <td>+0</td>
                   <td>+0</td>
                 </tr>
                 
                 <tr>
+                  <td>33</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
+                  <td>-1</td>
+                  <td>+1</td>
+                </tr>
+                
+                <tr>
                   <td>34</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>35</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
-                  <td>-1</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>Draw</td>
+                  <td>+0</td>
+                  <td>+0</td>
                 </tr>
                 
                 <tr>
                   <td>36</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>37</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
                   <td>-1</td>
                   <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>38</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
-                </tr>
-                
-                <tr>
-                  <td>39</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
+                  <td>39</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
+                  <td>-1</td>
+                  <td>+1</td>
+                </tr>
+                
+                <tr>
                   <td>40</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>41</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
                   <td>-1</td>
                   <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>42</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>43</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>44</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>45</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>46</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
                   <td>-1</td>
                   <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>47</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
-                </tr>
-                
-                <tr>
-                  <td>48</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
+                  <td>48</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
+                  <td>-1</td>
+                  <td>+1</td>
+                </tr>
+                
+                <tr>
                   <td>49</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>50</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>51</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
+                  <td>-1</td>
+                  <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>52</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>53</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>54</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
                   <td>Draw</td>
                   <td>+0</td>
                   <td>+0</td>
@@ -668,89 +708,89 @@
                 
                 <tr>
                   <td>55</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
                   <td>-1</td>
+                  <td>+1</td>
                 </tr>
                 
                 <tr>
                   <td>56</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>57</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
+                  <td>-1</td>
+                  <td>+1</td>
+                </tr>
+                
+                <tr>
+                  <td>58</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
                   <td>Draw</td>
                   <td>+0</td>
                   <td>+0</td>
                 </tr>
                 
                 <tr>
-                  <td>58</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
-                  <td>+1</td>
-                </tr>
-                
-                <tr>
                   <td>59</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>60</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
+                  <td>SARSA vs Random</td>
+                  <td>sally (X)</td>
+                  <td>randy (O)</td>
+                  <td>sally</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>61</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
+                  <td>randy</td>
+                  <td>-1</td>
+                  <td>+1</td>
+                </tr>
+                
+                <tr>
+                  <td>62</td>
+                  <td>MCTS vs Random</td>
+                  <td>tom (X)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
                 </tr>
                 
                 <tr>
-                  <td>62</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
-                </tr>
-                
-                <tr>
                   <td>63</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -758,29 +798,29 @@
                 
                 <tr>
                   <td>64</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
                   <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>65</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>66</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -788,9 +828,9 @@
                 
                 <tr>
                   <td>67</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -798,9 +838,9 @@
                 
                 <tr>
                   <td>68</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -808,29 +848,29 @@
                 
                 <tr>
                   <td>69</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>70</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>71</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -838,9 +878,9 @@
                 
                 <tr>
                   <td>72</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -848,39 +888,39 @@
                 
                 <tr>
                   <td>73</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>74</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>75</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
                   <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>76</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -888,9 +928,9 @@
                 
                 <tr>
                   <td>77</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>Draw</td>
                   <td>+0</td>
                   <td>+0</td>
@@ -898,9 +938,9 @@
                 
                 <tr>
                   <td>78</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -908,19 +948,19 @@
                 
                 <tr>
                   <td>79</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>80</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -928,9 +968,9 @@
                 
                 <tr>
                   <td>81</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -938,9 +978,9 @@
                 
                 <tr>
                   <td>82</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -948,9 +988,9 @@
                 
                 <tr>
                   <td>83</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -958,9 +998,9 @@
                 
                 <tr>
                   <td>84</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -968,19 +1008,19 @@
                 
                 <tr>
                   <td>85</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
                   <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>86</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -988,139 +1028,39 @@
                 
                 <tr>
                   <td>87</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>88</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
+                  <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>89</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
+                  <td>randy (O)</td>
+                  <td>tom</td>
                   <td>+1</td>
+                  <td>-1</td>
                 </tr>
                 
                 <tr>
                   <td>90</td>
-                  <td>tom vs jerry</td>
+                  <td>MCTS vs Random</td>
                   <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
-                </tr>
-                
-                <tr>
-                  <td>91</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
-                </tr>
-                
-                <tr>
-                  <td>92</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
-                </tr>
-                
-                <tr>
-                  <td>93</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
-                  <td>-1</td>
-                </tr>
-                
-                <tr>
-                  <td>94</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
-                </tr>
-                
-                <tr>
-                  <td>95</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
-                  <td>-1</td>
-                </tr>
-                
-                <tr>
-                  <td>96</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>Draw</td>
-                  <td>+0</td>
-                  <td>+0</td>
-                </tr>
-                
-                <tr>
-                  <td>97</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
-                  <td>+1</td>
-                </tr>
-                
-                <tr>
-                  <td>98</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>jerry</td>
-                  <td>-1</td>
-                  <td>+1</td>
-                </tr>
-                
-                <tr>
-                  <td>99</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
-                  <td>tom</td>
-                  <td>+1</td>
-                  <td>-1</td>
-                </tr>
-                
-                <tr>
-                  <td>100</td>
-                  <td>tom vs jerry</td>
-                  <td>tom (X)</td>
-                  <td>jerry (O)</td>
+                  <td>randy (O)</td>
                   <td>tom</td>
                   <td>+1</td>
                   <td>-1</td>
@@ -1130,8 +1070,9 @@
     </section>
 
     <section id="trend" class="tab">
-      <h2>Cumulative Win Ratio</h2>
+      <h2>Rolling Win Ratio</h2>
       <div class="chartcard">
+        <div class="small">Window: last 10 games per agent. Draws and losses count as non-wins.</div>
         <canvas id="trendCanvas" width="1200" height="420"></canvas>
         <div id="legend" class="legend"></div>
       </div>
@@ -1139,7 +1080,7 @@
   </div>
 
   <script>
-    const DATA = {"results": [{"game_index": 1, "matchup_game_index": 1, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 2, "matchup_game_index": 2, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 3, "matchup_game_index": 3, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 4, "matchup_game_index": 4, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 5, "matchup_game_index": 5, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 6, "matchup_game_index": 6, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 7, "matchup_game_index": 7, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 8, "matchup_game_index": 8, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 9, "matchup_game_index": 9, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 10, "matchup_game_index": 10, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 11, "matchup_game_index": 11, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 12, "matchup_game_index": 12, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 13, "matchup_game_index": 13, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 14, "matchup_game_index": 14, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 15, "matchup_game_index": 15, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 16, "matchup_game_index": 16, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 17, "matchup_game_index": 17, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 18, "matchup_game_index": 18, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 19, "matchup_game_index": 19, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 20, "matchup_game_index": 20, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 21, "matchup_game_index": 21, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 22, "matchup_game_index": 22, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 23, "matchup_game_index": 23, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 24, "matchup_game_index": 24, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 25, "matchup_game_index": 25, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 26, "matchup_game_index": 26, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 27, "matchup_game_index": 27, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 28, "matchup_game_index": 28, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 29, "matchup_game_index": 29, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 30, "matchup_game_index": 30, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 6}, {"game_index": 31, "matchup_game_index": 31, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 32, "matchup_game_index": 32, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 33, "matchup_game_index": 33, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 34, "matchup_game_index": 34, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 35, "matchup_game_index": 35, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 36, "matchup_game_index": 36, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 6}, {"game_index": 37, "matchup_game_index": 37, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 6}, {"game_index": 38, "matchup_game_index": 38, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 39, "matchup_game_index": 39, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 40, "matchup_game_index": 40, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 41, "matchup_game_index": 41, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 42, "matchup_game_index": 42, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 43, "matchup_game_index": 43, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 44, "matchup_game_index": 44, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 45, "matchup_game_index": 45, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 46, "matchup_game_index": 46, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 47, "matchup_game_index": 47, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 48, "matchup_game_index": 48, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 49, "matchup_game_index": 49, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 50, "matchup_game_index": 50, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 51, "matchup_game_index": 51, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 52, "matchup_game_index": 52, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 53, "matchup_game_index": 53, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 54, "matchup_game_index": 54, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 55, "matchup_game_index": 55, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 56, "matchup_game_index": 56, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 57, "matchup_game_index": 57, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 58, "matchup_game_index": 58, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 59, "matchup_game_index": 59, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 60, "matchup_game_index": 60, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 61, "matchup_game_index": 61, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 62, "matchup_game_index": 62, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 63, "matchup_game_index": 63, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 64, "matchup_game_index": 64, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 6}, {"game_index": 65, "matchup_game_index": 65, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 66, "matchup_game_index": 66, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 67, "matchup_game_index": 67, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 68, "matchup_game_index": 68, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 69, "matchup_game_index": 69, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 70, "matchup_game_index": 70, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 71, "matchup_game_index": 71, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 72, "matchup_game_index": 72, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 73, "matchup_game_index": 73, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 74, "matchup_game_index": 74, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 75, "matchup_game_index": 75, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 76, "matchup_game_index": 76, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 77, "matchup_game_index": 77, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 78, "matchup_game_index": 78, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 79, "matchup_game_index": 79, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 80, "matchup_game_index": 80, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 81, "matchup_game_index": 81, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 82, "matchup_game_index": 82, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 83, "matchup_game_index": 83, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 84, "matchup_game_index": 84, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 85, "matchup_game_index": 85, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 6}, {"game_index": 86, "matchup_game_index": 86, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 87, "matchup_game_index": 87, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 88, "matchup_game_index": 88, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 89, "matchup_game_index": 89, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 6}, {"game_index": 90, "matchup_game_index": 90, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 91, "matchup_game_index": 91, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 92, "matchup_game_index": 92, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 93, "matchup_game_index": 93, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 94, "matchup_game_index": 94, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 95, "matchup_game_index": 95, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 96, "matchup_game_index": 96, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 97, "matchup_game_index": 97, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 98, "matchup_game_index": 98, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "jerry", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 6}, {"game_index": 99, "matchup_game_index": 99, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 100, "matchup_game_index": 100, "matchup_label": "tom vs jerry", "agent1_name": "tom", "agent2_name": "jerry", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}], "win_ratio_series": {"tom": [{"game_index": 1, "ratio": 1.0}, {"game_index": 2, "ratio": 0.5}, {"game_index": 3, "ratio": 0.6666666666666666}, {"game_index": 4, "ratio": 0.75}, {"game_index": 5, "ratio": 0.8}, {"game_index": 6, "ratio": 0.8333333333333334}, {"game_index": 7, "ratio": 0.8571428571428571}, {"game_index": 8, "ratio": 0.875}, {"game_index": 9, "ratio": 0.7777777777777778}, {"game_index": 10, "ratio": 0.7}, {"game_index": 11, "ratio": 0.6363636363636364}, {"game_index": 12, "ratio": 0.6666666666666666}, {"game_index": 13, "ratio": 0.6153846153846154}, {"game_index": 14, "ratio": 0.6428571428571429}, {"game_index": 15, "ratio": 0.6666666666666666}, {"game_index": 16, "ratio": 0.6875}, {"game_index": 17, "ratio": 0.7058823529411765}, {"game_index": 18, "ratio": 0.7222222222222222}, {"game_index": 19, "ratio": 0.7368421052631579}, {"game_index": 20, "ratio": 0.7}, {"game_index": 21, "ratio": 0.7142857142857143}, {"game_index": 22, "ratio": 0.7272727272727273}, {"game_index": 23, "ratio": 0.7391304347826086}, {"game_index": 24, "ratio": 0.7083333333333334}, {"game_index": 25, "ratio": 0.68}, {"game_index": 26, "ratio": 0.6923076923076923}, {"game_index": 27, "ratio": 0.6666666666666666}, {"game_index": 28, "ratio": 0.6785714285714286}, {"game_index": 29, "ratio": 0.6551724137931034}, {"game_index": 30, "ratio": 0.6333333333333333}, {"game_index": 31, "ratio": 0.6451612903225806}, {"game_index": 32, "ratio": 0.65625}, {"game_index": 33, "ratio": 0.6363636363636364}, {"game_index": 34, "ratio": 0.6470588235294118}, {"game_index": 35, "ratio": 0.6571428571428571}, {"game_index": 36, "ratio": 0.6388888888888888}, {"game_index": 37, "ratio": 0.6216216216216216}, {"game_index": 38, "ratio": 0.6052631578947368}, {"game_index": 39, "ratio": 0.6153846153846154}, {"game_index": 40, "ratio": 0.6}, {"game_index": 41, "ratio": 0.5853658536585366}, {"game_index": 42, "ratio": 0.5952380952380952}, {"game_index": 43, "ratio": 0.5813953488372093}, {"game_index": 44, "ratio": 0.5909090909090909}, {"game_index": 45, "ratio": 0.5777777777777777}, {"game_index": 46, "ratio": 0.5652173913043478}, {"game_index": 47, "ratio": 0.5531914893617021}, {"game_index": 48, "ratio": 0.5625}, {"game_index": 49, "ratio": 0.5510204081632653}, {"game_index": 50, "ratio": 0.56}, {"game_index": 51, "ratio": 0.5490196078431373}, {"game_index": 52, "ratio": 0.5576923076923077}, {"game_index": 53, "ratio": 0.5660377358490566}, {"game_index": 54, "ratio": 0.5555555555555556}, {"game_index": 55, "ratio": 0.5636363636363636}, {"game_index": 56, "ratio": 0.5714285714285714}, {"game_index": 57, "ratio": 0.5614035087719298}, {"game_index": 58, "ratio": 0.5517241379310345}, {"game_index": 59, "ratio": 0.559322033898305}, {"game_index": 60, "ratio": 0.5666666666666667}, {"game_index": 61, "ratio": 0.5737704918032787}, {"game_index": 62, "ratio": 0.5645161290322581}, {"game_index": 63, "ratio": 0.5714285714285714}, {"game_index": 64, "ratio": 0.5625}, {"game_index": 65, "ratio": 0.5538461538461539}, {"game_index": 66, "ratio": 0.5606060606060606}, {"game_index": 67, "ratio": 0.5671641791044776}, {"game_index": 68, "ratio": 0.5735294117647058}, {"game_index": 69, "ratio": 0.5652173913043478}, {"game_index": 70, "ratio": 0.5571428571428572}, {"game_index": 71, "ratio": 0.5633802816901409}, {"game_index": 72, "ratio": 0.5694444444444444}, {"game_index": 73, "ratio": 0.5616438356164384}, {"game_index": 74, "ratio": 0.5540540540540541}, {"game_index": 75, "ratio": 0.5466666666666666}, {"game_index": 76, "ratio": 0.5526315789473685}, {"game_index": 77, "ratio": 0.5454545454545454}, {"game_index": 78, "ratio": 0.5512820512820513}, {"game_index": 79, "ratio": 0.5443037974683544}, {"game_index": 80, "ratio": 0.55}, {"game_index": 81, "ratio": 0.5555555555555556}, {"game_index": 82, "ratio": 0.5609756097560976}, {"game_index": 83, "ratio": 0.5662650602409639}, {"game_index": 84, "ratio": 0.5714285714285714}, {"game_index": 85, "ratio": 0.5647058823529412}, {"game_index": 86, "ratio": 0.5697674418604651}, {"game_index": 87, "ratio": 0.5632183908045977}, {"game_index": 88, "ratio": 0.5568181818181818}, {"game_index": 89, "ratio": 0.550561797752809}, {"game_index": 90, "ratio": 0.5444444444444444}, {"game_index": 91, "ratio": 0.5384615384615384}, {"game_index": 92, "ratio": 0.532608695652174}, {"game_index": 93, "ratio": 0.5376344086021505}, {"game_index": 94, "ratio": 0.5319148936170213}, {"game_index": 95, "ratio": 0.5368421052631579}, {"game_index": 96, "ratio": 0.53125}, {"game_index": 97, "ratio": 0.5257731958762887}, {"game_index": 98, "ratio": 0.5204081632653061}, {"game_index": 99, "ratio": 0.5252525252525253}, {"game_index": 100, "ratio": 0.53}], "jerry": [{"game_index": 1, "ratio": 0.0}, {"game_index": 2, "ratio": 0.5}, {"game_index": 3, "ratio": 0.3333333333333333}, {"game_index": 4, "ratio": 0.25}, {"game_index": 5, "ratio": 0.2}, {"game_index": 6, "ratio": 0.16666666666666666}, {"game_index": 7, "ratio": 0.14285714285714285}, {"game_index": 8, "ratio": 0.125}, {"game_index": 9, "ratio": 0.1111111111111111}, {"game_index": 10, "ratio": 0.1}, {"game_index": 11, "ratio": 0.09090909090909091}, {"game_index": 12, "ratio": 0.08333333333333333}, {"game_index": 13, "ratio": 0.07692307692307693}, {"game_index": 14, "ratio": 0.07142857142857142}, {"game_index": 15, "ratio": 0.06666666666666667}, {"game_index": 16, "ratio": 0.0625}, {"game_index": 17, "ratio": 0.058823529411764705}, {"game_index": 18, "ratio": 0.05555555555555555}, {"game_index": 19, "ratio": 0.05263157894736842}, {"game_index": 20, "ratio": 0.1}, {"game_index": 21, "ratio": 0.09523809523809523}, {"game_index": 22, "ratio": 0.09090909090909091}, {"game_index": 23, "ratio": 0.08695652173913043}, {"game_index": 24, "ratio": 0.08333333333333333}, {"game_index": 25, "ratio": 0.12}, {"game_index": 26, "ratio": 0.11538461538461539}, {"game_index": 27, "ratio": 0.1111111111111111}, {"game_index": 28, "ratio": 0.10714285714285714}, {"game_index": 29, "ratio": 0.10344827586206896}, {"game_index": 30, "ratio": 0.13333333333333333}, {"game_index": 31, "ratio": 0.12903225806451613}, {"game_index": 32, "ratio": 0.125}, {"game_index": 33, "ratio": 0.12121212121212122}, {"game_index": 34, "ratio": 0.11764705882352941}, {"game_index": 35, "ratio": 0.11428571428571428}, {"game_index": 36, "ratio": 0.1388888888888889}, {"game_index": 37, "ratio": 0.16216216216216217}, {"game_index": 38, "ratio": 0.15789473684210525}, {"game_index": 39, "ratio": 0.15384615384615385}, {"game_index": 40, "ratio": 0.15}, {"game_index": 41, "ratio": 0.17073170731707318}, {"game_index": 42, "ratio": 0.16666666666666666}, {"game_index": 43, "ratio": 0.18604651162790697}, {"game_index": 44, "ratio": 0.18181818181818182}, {"game_index": 45, "ratio": 0.17777777777777778}, {"game_index": 46, "ratio": 0.1956521739130435}, {"game_index": 47, "ratio": 0.19148936170212766}, {"game_index": 48, "ratio": 0.1875}, {"game_index": 49, "ratio": 0.1836734693877551}, {"game_index": 50, "ratio": 0.18}, {"game_index": 51, "ratio": 0.17647058823529413}, {"game_index": 52, "ratio": 0.17307692307692307}, {"game_index": 53, "ratio": 0.16981132075471697}, {"game_index": 54, "ratio": 0.16666666666666666}, {"game_index": 55, "ratio": 0.16363636363636364}, {"game_index": 56, "ratio": 0.16071428571428573}, {"game_index": 57, "ratio": 0.15789473684210525}, {"game_index": 58, "ratio": 0.1724137931034483}, {"game_index": 59, "ratio": 0.1694915254237288}, {"game_index": 60, "ratio": 0.16666666666666666}, {"game_index": 61, "ratio": 0.16393442622950818}, {"game_index": 62, "ratio": 0.16129032258064516}, {"game_index": 63, "ratio": 0.15873015873015872}, {"game_index": 64, "ratio": 0.171875}, {"game_index": 65, "ratio": 0.16923076923076924}, {"game_index": 66, "ratio": 0.16666666666666666}, {"game_index": 67, "ratio": 0.16417910447761194}, {"game_index": 68, "ratio": 0.16176470588235295}, {"game_index": 69, "ratio": 0.15942028985507245}, {"game_index": 70, "ratio": 0.15714285714285714}, {"game_index": 71, "ratio": 0.15492957746478872}, {"game_index": 72, "ratio": 0.1527777777777778}, {"game_index": 73, "ratio": 0.1506849315068493}, {"game_index": 74, "ratio": 0.14864864864864866}, {"game_index": 75, "ratio": 0.16}, {"game_index": 76, "ratio": 0.15789473684210525}, {"game_index": 77, "ratio": 0.15584415584415584}, {"game_index": 78, "ratio": 0.15384615384615385}, {"game_index": 79, "ratio": 0.1518987341772152}, {"game_index": 80, "ratio": 0.15}, {"game_index": 81, "ratio": 0.14814814814814814}, {"game_index": 82, "ratio": 0.14634146341463414}, {"game_index": 83, "ratio": 0.14457831325301204}, {"game_index": 84, "ratio": 0.14285714285714285}, {"game_index": 85, "ratio": 0.15294117647058825}, {"game_index": 86, "ratio": 0.1511627906976744}, {"game_index": 87, "ratio": 0.14942528735632185}, {"game_index": 88, "ratio": 0.14772727272727273}, {"game_index": 89, "ratio": 0.15730337078651685}, {"game_index": 90, "ratio": 0.15555555555555556}, {"game_index": 91, "ratio": 0.15384615384615385}, {"game_index": 92, "ratio": 0.15217391304347827}, {"game_index": 93, "ratio": 0.15053763440860216}, {"game_index": 94, "ratio": 0.14893617021276595}, {"game_index": 95, "ratio": 0.14736842105263157}, {"game_index": 96, "ratio": 0.14583333333333334}, {"game_index": 97, "ratio": 0.15463917525773196}, {"game_index": 98, "ratio": 0.16326530612244897}, {"game_index": 99, "ratio": 0.16161616161616163}, {"game_index": 100, "ratio": 0.16}]}, "agent_totals": {"tom": {"games": 100, "wins": 53, "losses": 16, "draws": 31}, "jerry": {"games": 100, "wins": 16, "losses": 53, "draws": 31}}, "matchups": [{"label": "tom vs jerry", "agent1_name": "MCTS_Agent", "agent2_name": "MCTS_Agent"}]};
+    const DATA = {"results": [{"game_index": 1, "matchup_game_index": 1, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 6}, {"game_index": 2, "matchup_game_index": 2, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 3, "matchup_game_index": 3, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 4, "matchup_game_index": 4, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 5, "matchup_game_index": 5, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 6, "matchup_game_index": 6, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 7, "matchup_game_index": 7, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 8, "matchup_game_index": 8, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 9, "matchup_game_index": 9, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 10, "matchup_game_index": 10, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 11, "matchup_game_index": 11, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 12, "matchup_game_index": 12, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 13, "matchup_game_index": 13, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 14, "matchup_game_index": 14, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 15, "matchup_game_index": 15, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 16, "matchup_game_index": 16, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 17, "matchup_game_index": 17, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 18, "matchup_game_index": 18, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 19, "matchup_game_index": 19, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 20, "matchup_game_index": 20, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 21, "matchup_game_index": 21, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 22, "matchup_game_index": 22, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 23, "matchup_game_index": 23, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 24, "matchup_game_index": 24, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 25, "matchup_game_index": 25, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 26, "matchup_game_index": 26, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 27, "matchup_game_index": 27, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 28, "matchup_game_index": 28, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 29, "matchup_game_index": 29, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 30, "matchup_game_index": 30, "matchup_label": "Q-learning vs Random", "agent1_name": "qbert", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "qbert", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 31, "matchup_game_index": 1, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 32, "matchup_game_index": 2, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 33, "matchup_game_index": 3, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 34, "matchup_game_index": 4, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 35, "matchup_game_index": 5, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 36, "matchup_game_index": 6, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 37, "matchup_game_index": 7, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 38, "matchup_game_index": 8, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 39, "matchup_game_index": 9, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 40, "matchup_game_index": 10, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 41, "matchup_game_index": 11, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 42, "matchup_game_index": 12, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 43, "matchup_game_index": 13, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 44, "matchup_game_index": 14, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 45, "matchup_game_index": 15, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 46, "matchup_game_index": 16, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 47, "matchup_game_index": 17, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 48, "matchup_game_index": 18, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 49, "matchup_game_index": 19, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 50, "matchup_game_index": 20, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 51, "matchup_game_index": 21, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 52, "matchup_game_index": 22, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 53, "matchup_game_index": 23, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 54, "matchup_game_index": 24, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 55, "matchup_game_index": 25, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 56, "matchup_game_index": 26, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 57, "matchup_game_index": 27, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 58, "matchup_game_index": 28, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 59, "matchup_game_index": 29, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 60, "matchup_game_index": 30, "matchup_label": "SARSA vs Random", "agent1_name": "sally", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "sally", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 61, "matchup_game_index": 1, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "O", "winner_side": "agent2", "winner_name": "randy", "agent1_score": -1, "agent2_score": 1, "is_draw": false, "turn_count": 8}, {"game_index": 62, "matchup_game_index": 2, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 63, "matchup_game_index": 3, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 64, "matchup_game_index": 4, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 65, "matchup_game_index": 5, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 66, "matchup_game_index": 6, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 67, "matchup_game_index": 7, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 68, "matchup_game_index": 8, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 69, "matchup_game_index": 9, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 70, "matchup_game_index": 10, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 71, "matchup_game_index": 11, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 72, "matchup_game_index": 12, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 73, "matchup_game_index": 13, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 74, "matchup_game_index": 14, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 75, "matchup_game_index": 15, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 76, "matchup_game_index": 16, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 77, "matchup_game_index": 17, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": null, "winner_side": "draw", "winner_name": "Draw", "agent1_score": 0, "agent2_score": 0, "is_draw": true, "turn_count": 9}, {"game_index": 78, "matchup_game_index": 18, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 79, "matchup_game_index": 19, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 80, "matchup_game_index": 20, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 81, "matchup_game_index": 21, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 82, "matchup_game_index": 22, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 83, "matchup_game_index": 23, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 84, "matchup_game_index": 24, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 85, "matchup_game_index": 25, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 86, "matchup_game_index": 26, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}, {"game_index": 87, "matchup_game_index": 27, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 88, "matchup_game_index": 28, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 9}, {"game_index": 89, "matchup_game_index": 29, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 5}, {"game_index": 90, "matchup_game_index": 30, "matchup_label": "MCTS vs Random", "agent1_name": "tom", "agent2_name": "randy", "agent1_marker": "X", "agent2_marker": "O", "winner_marker": "X", "winner_side": "agent1", "winner_name": "tom", "agent1_score": 1, "agent2_score": -1, "is_draw": false, "turn_count": 7}], "win_ratio_series": {"qbert": [{"game_index": 1, "ratio": 0.0, "window_size": 1}, {"game_index": 2, "ratio": 0.0, "window_size": 2}, {"game_index": 3, "ratio": 0.3333333333333333, "window_size": 3}, {"game_index": 4, "ratio": 0.5, "window_size": 4}, {"game_index": 5, "ratio": 0.6, "window_size": 5}, {"game_index": 6, "ratio": 0.6666666666666666, "window_size": 6}, {"game_index": 7, "ratio": 0.5714285714285714, "window_size": 7}, {"game_index": 8, "ratio": 0.625, "window_size": 8}, {"game_index": 9, "ratio": 0.6666666666666666, "window_size": 9}, {"game_index": 10, "ratio": 0.7, "window_size": 10}, {"game_index": 11, "ratio": 0.7, "window_size": 10}, {"game_index": 12, "ratio": 0.8, "window_size": 10}, {"game_index": 13, "ratio": 0.7, "window_size": 10}, {"game_index": 14, "ratio": 0.6, "window_size": 10}, {"game_index": 15, "ratio": 0.6, "window_size": 10}, {"game_index": 16, "ratio": 0.5, "window_size": 10}, {"game_index": 17, "ratio": 0.6, "window_size": 10}, {"game_index": 18, "ratio": 0.6, "window_size": 10}, {"game_index": 19, "ratio": 0.6, "window_size": 10}, {"game_index": 20, "ratio": 0.5, "window_size": 10}, {"game_index": 21, "ratio": 0.6, "window_size": 10}, {"game_index": 22, "ratio": 0.6, "window_size": 10}, {"game_index": 23, "ratio": 0.7, "window_size": 10}, {"game_index": 24, "ratio": 0.8, "window_size": 10}, {"game_index": 25, "ratio": 0.8, "window_size": 10}, {"game_index": 26, "ratio": 0.9, "window_size": 10}, {"game_index": 27, "ratio": 0.8, "window_size": 10}, {"game_index": 28, "ratio": 0.7, "window_size": 10}, {"game_index": 29, "ratio": 0.7, "window_size": 10}, {"game_index": 30, "ratio": 0.8, "window_size": 10}], "randy": [{"game_index": 1, "ratio": 1.0, "window_size": 1}, {"game_index": 2, "ratio": 1.0, "window_size": 2}, {"game_index": 3, "ratio": 0.6666666666666666, "window_size": 3}, {"game_index": 4, "ratio": 0.5, "window_size": 4}, {"game_index": 5, "ratio": 0.4, "window_size": 5}, {"game_index": 6, "ratio": 0.3333333333333333, "window_size": 6}, {"game_index": 7, "ratio": 0.2857142857142857, "window_size": 7}, {"game_index": 8, "ratio": 0.25, "window_size": 8}, {"game_index": 9, "ratio": 0.2222222222222222, "window_size": 9}, {"game_index": 10, "ratio": 0.2, "window_size": 10}, {"game_index": 11, "ratio": 0.2, "window_size": 10}, {"game_index": 12, "ratio": 0.1, "window_size": 10}, {"game_index": 13, "ratio": 0.1, "window_size": 10}, {"game_index": 14, "ratio": 0.1, "window_size": 10}, {"game_index": 15, "ratio": 0.1, "window_size": 10}, {"game_index": 16, "ratio": 0.2, "window_size": 10}, {"game_index": 17, "ratio": 0.2, "window_size": 10}, {"game_index": 18, "ratio": 0.2, "window_size": 10}, {"game_index": 19, "ratio": 0.2, "window_size": 10}, {"game_index": 20, "ratio": 0.3, "window_size": 10}, {"game_index": 21, "ratio": 0.2, "window_size": 10}, {"game_index": 22, "ratio": 0.2, "window_size": 10}, {"game_index": 23, "ratio": 0.2, "window_size": 10}, {"game_index": 24, "ratio": 0.2, "window_size": 10}, {"game_index": 25, "ratio": 0.2, "window_size": 10}, {"game_index": 26, "ratio": 0.1, "window_size": 10}, {"game_index": 27, "ratio": 0.2, "window_size": 10}, {"game_index": 28, "ratio": 0.3, "window_size": 10}, {"game_index": 29, "ratio": 0.3, "window_size": 10}, {"game_index": 30, "ratio": 0.2, "window_size": 10}, {"game_index": 31, "ratio": 0.2, "window_size": 10}, {"game_index": 32, "ratio": 0.2, "window_size": 10}, {"game_index": 33, "ratio": 0.3, "window_size": 10}, {"game_index": 34, "ratio": 0.3, "window_size": 10}, {"game_index": 35, "ratio": 0.3, "window_size": 10}, {"game_index": 36, "ratio": 0.3, "window_size": 10}, {"game_index": 37, "ratio": 0.3, "window_size": 10}, {"game_index": 38, "ratio": 0.2, "window_size": 10}, {"game_index": 39, "ratio": 0.3, "window_size": 10}, {"game_index": 40, "ratio": 0.3, "window_size": 10}, {"game_index": 41, "ratio": 0.4, "window_size": 10}, {"game_index": 42, "ratio": 0.4, "window_size": 10}, {"game_index": 43, "ratio": 0.3, "window_size": 10}, {"game_index": 44, "ratio": 0.3, "window_size": 10}, {"game_index": 45, "ratio": 0.3, "window_size": 10}, {"game_index": 46, "ratio": 0.4, "window_size": 10}, {"game_index": 47, "ratio": 0.3, "window_size": 10}, {"game_index": 48, "ratio": 0.4, "window_size": 10}, {"game_index": 49, "ratio": 0.3, "window_size": 10}, {"game_index": 50, "ratio": 0.3, "window_size": 10}, {"game_index": 51, "ratio": 0.3, "window_size": 10}, {"game_index": 52, "ratio": 0.3, "window_size": 10}, {"game_index": 53, "ratio": 0.3, "window_size": 10}, {"game_index": 54, "ratio": 0.3, "window_size": 10}, {"game_index": 55, "ratio": 0.4, "window_size": 10}, {"game_index": 56, "ratio": 0.3, "window_size": 10}, {"game_index": 57, "ratio": 0.4, "window_size": 10}, {"game_index": 58, "ratio": 0.3, "window_size": 10}, {"game_index": 59, "ratio": 0.3, "window_size": 10}, {"game_index": 60, "ratio": 0.3, "window_size": 10}, {"game_index": 61, "ratio": 0.3, "window_size": 10}, {"game_index": 62, "ratio": 0.3, "window_size": 10}, {"game_index": 63, "ratio": 0.3, "window_size": 10}, {"game_index": 64, "ratio": 0.3, "window_size": 10}, {"game_index": 65, "ratio": 0.2, "window_size": 10}, {"game_index": 66, "ratio": 0.2, "window_size": 10}, {"game_index": 67, "ratio": 0.1, "window_size": 10}, {"game_index": 68, "ratio": 0.1, "window_size": 10}, {"game_index": 69, "ratio": 0.1, "window_size": 10}, {"game_index": 70, "ratio": 0.1, "window_size": 10}, {"game_index": 71, "ratio": 0.0, "window_size": 10}, {"game_index": 72, "ratio": 0.0, "window_size": 10}, {"game_index": 73, "ratio": 0.0, "window_size": 10}, {"game_index": 74, "ratio": 0.0, "window_size": 10}, {"game_index": 75, "ratio": 0.0, "window_size": 10}, {"game_index": 76, "ratio": 0.0, "window_size": 10}, {"game_index": 77, "ratio": 0.0, "window_size": 10}, {"game_index": 78, "ratio": 0.0, "window_size": 10}, {"game_index": 79, "ratio": 0.0, "window_size": 10}, {"game_index": 80, "ratio": 0.0, "window_size": 10}, {"game_index": 81, "ratio": 0.0, "window_size": 10}, {"game_index": 82, "ratio": 0.0, "window_size": 10}, {"game_index": 83, "ratio": 0.0, "window_size": 10}, {"game_index": 84, "ratio": 0.0, "window_size": 10}, {"game_index": 85, "ratio": 0.0, "window_size": 10}, {"game_index": 86, "ratio": 0.0, "window_size": 10}, {"game_index": 87, "ratio": 0.0, "window_size": 10}, {"game_index": 88, "ratio": 0.0, "window_size": 10}, {"game_index": 89, "ratio": 0.0, "window_size": 10}, {"game_index": 90, "ratio": 0.0, "window_size": 10}], "sally": [{"game_index": 31, "ratio": 1.0, "window_size": 1}, {"game_index": 32, "ratio": 0.5, "window_size": 2}, {"game_index": 33, "ratio": 0.3333333333333333, "window_size": 3}, {"game_index": 34, "ratio": 0.5, "window_size": 4}, {"game_index": 35, "ratio": 0.4, "window_size": 5}, {"game_index": 36, "ratio": 0.5, "window_size": 6}, {"game_index": 37, "ratio": 0.42857142857142855, "window_size": 7}, {"game_index": 38, "ratio": 0.5, "window_size": 8}, {"game_index": 39, "ratio": 0.4444444444444444, "window_size": 9}, {"game_index": 40, "ratio": 0.5, "window_size": 10}, {"game_index": 41, "ratio": 0.4, "window_size": 10}, {"game_index": 42, "ratio": 0.5, "window_size": 10}, {"game_index": 43, "ratio": 0.6, "window_size": 10}, {"game_index": 44, "ratio": 0.6, "window_size": 10}, {"game_index": 45, "ratio": 0.7, "window_size": 10}, {"game_index": 46, "ratio": 0.6, "window_size": 10}, {"game_index": 47, "ratio": 0.7, "window_size": 10}, {"game_index": 48, "ratio": 0.6, "window_size": 10}, {"game_index": 49, "ratio": 0.7, "window_size": 10}, {"game_index": 50, "ratio": 0.7, "window_size": 10}, {"game_index": 51, "ratio": 0.7, "window_size": 10}, {"game_index": 52, "ratio": 0.7, "window_size": 10}, {"game_index": 53, "ratio": 0.7, "window_size": 10}, {"game_index": 54, "ratio": 0.6, "window_size": 10}, {"game_index": 55, "ratio": 0.5, "window_size": 10}, {"game_index": 56, "ratio": 0.6, "window_size": 10}, {"game_index": 57, "ratio": 0.5, "window_size": 10}, {"game_index": 58, "ratio": 0.5, "window_size": 10}, {"game_index": 59, "ratio": 0.5, "window_size": 10}, {"game_index": 60, "ratio": 0.5, "window_size": 10}], "tom": [{"game_index": 61, "ratio": 0.0, "window_size": 1}, {"game_index": 62, "ratio": 0.5, "window_size": 2}, {"game_index": 63, "ratio": 0.6666666666666666, "window_size": 3}, {"game_index": 64, "ratio": 0.75, "window_size": 4}, {"game_index": 65, "ratio": 0.8, "window_size": 5}, {"game_index": 66, "ratio": 0.8333333333333334, "window_size": 6}, {"game_index": 67, "ratio": 0.8571428571428571, "window_size": 7}, {"game_index": 68, "ratio": 0.875, "window_size": 8}, {"game_index": 69, "ratio": 0.8888888888888888, "window_size": 9}, {"game_index": 70, "ratio": 0.9, "window_size": 10}, {"game_index": 71, "ratio": 1.0, "window_size": 10}, {"game_index": 72, "ratio": 1.0, "window_size": 10}, {"game_index": 73, "ratio": 1.0, "window_size": 10}, {"game_index": 74, "ratio": 1.0, "window_size": 10}, {"game_index": 75, "ratio": 1.0, "window_size": 10}, {"game_index": 76, "ratio": 1.0, "window_size": 10}, {"game_index": 77, "ratio": 0.9, "window_size": 10}, {"game_index": 78, "ratio": 0.9, "window_size": 10}, {"game_index": 79, "ratio": 0.9, "window_size": 10}, {"game_index": 80, "ratio": 0.9, "window_size": 10}, {"game_index": 81, "ratio": 0.9, "window_size": 10}, {"game_index": 82, "ratio": 0.9, "window_size": 10}, {"game_index": 83, "ratio": 0.9, "window_size": 10}, {"game_index": 84, "ratio": 0.9, "window_size": 10}, {"game_index": 85, "ratio": 0.9, "window_size": 10}, {"game_index": 86, "ratio": 0.9, "window_size": 10}, {"game_index": 87, "ratio": 1.0, "window_size": 10}, {"game_index": 88, "ratio": 1.0, "window_size": 10}, {"game_index": 89, "ratio": 1.0, "window_size": 10}, {"game_index": 90, "ratio": 1.0, "window_size": 10}]}, "agent_totals": {"qbert": {"games": 30, "wins": 20, "losses": 7, "draws": 3}, "randy": {"games": 90, "wins": 17, "losses": 65, "draws": 8}, "sally": {"games": 30, "wins": 17, "losses": 9, "draws": 4}, "tom": {"games": 30, "wins": 28, "losses": 1, "draws": 1}}, "rolling_window": 10, "matchups": [{"label": "Q-learning vs Random", "agent1_name": "QLearningAgent", "agent2_name": "RandomAgent"}, {"label": "SARSA vs Random", "agent1_name": "SARSAAgent", "agent2_name": "RandomAgent"}, {"label": "MCTS vs Random", "agent1_name": "MCTS_Agent", "agent2_name": "RandomAgent"}]};
     const tabs = Array.from(document.querySelectorAll('.tabbtn'));
     const panels = Array.from(document.querySelectorAll('.tab'));
     tabs.forEach(btn => btn.addEventListener('click', () => {
@@ -1189,12 +1130,39 @@
       const agentNames = Object.keys(DATA.win_ratio_series);
       const allPoints = agentNames.flatMap(name => DATA.win_ratio_series[name]);
       const maxGame = Math.max(1, ...allPoints.map(p => p.game_index));
+      const minGame = 1;
 
       ctx.fillStyle = '#5b6472';
       ctx.font = '12px Arial';
-      for (let i = 0; i <= Math.min(maxGame, 10); i++) {
-        const x = padding.left + plotW * (i / Math.max(1, maxGame - 1));
-        ctx.fillText(String(i + 1), x - 4, height - 14);
+
+      function xForGame(gameNumber) {
+        return padding.left + plotW * ((gameNumber - minGame) / Math.max(1, maxGame - minGame));
+      }
+
+      const tickStep = Math.max(1, Math.ceil(maxGame / 12));
+      const ticks = [];
+      for (let gameNumber = minGame; gameNumber <= maxGame; gameNumber += tickStep) {
+        ticks.push(gameNumber);
+      }
+      if (ticks[ticks.length - 1] !== maxGame) {
+        ticks.push(maxGame);
+      }
+
+      ticks.forEach(gameNumber => {
+        const x = xForGame(gameNumber);
+        ctx.fillText(String(gameNumber), x - 4, height - 14);
+      });
+
+      if (maxGame <= 120) {
+        ctx.strokeStyle = '#eef2f7';
+        ctx.lineWidth = 1;
+        for (let gameNumber = minGame; gameNumber <= maxGame; gameNumber++) {
+          const x = xForGame(gameNumber);
+          ctx.beginPath();
+          ctx.moveTo(x, height - padding.bottom);
+          ctx.lineTo(x, height - padding.bottom + 4);
+          ctx.stroke();
+        }
       }
 
       agentNames.forEach((name, idx) => {
@@ -1204,7 +1172,7 @@
         ctx.strokeStyle = colors[idx % colors.length];
         ctx.lineWidth = 2.5;
         series.forEach((point, i) => {
-          const x = padding.left + plotW * ((point.game_index - 1) / Math.max(1, maxGame - 1));
+          const x = xForGame(point.game_index);
           const y = padding.top + plotH * (1 - point.ratio);
           if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
         });

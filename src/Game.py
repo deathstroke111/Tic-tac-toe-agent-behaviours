@@ -32,6 +32,18 @@ class Game:
         """Returns a plain list copy of the current board for stable logging."""
         return [row[:] for row in self.board.board]
 
+    def get_state_key(self):
+        """Returns a hashable state representation for tabular RL agents."""
+        return tuple(cell or "-" for row in self.board.board for cell in row)
+
+    def reward_for_marker(self, marker, winner=None, invalid_move=False):
+        """Returns reward from one player's perspective."""
+        if invalid_move:
+            return -10.0
+        if winner is None:
+            return 0.0
+        return 1.0 if winner == marker else -1.0
+
     def _format_board(self, board_state):
         """Builds a text visualization of a board snapshot."""
         lines = ["-------------"]
@@ -61,7 +73,13 @@ class Game:
         # 1. Check if the move is valid and execute it
         if not self.board.make_move(row, col, current_player):
             logging.warning(f"Invalid move attempted by {current_player} at ({row}, {col}).")
-            return self.get_state(), -10.0, True, {"message": "Invalid Move"} # Penalize invalid moves
+            return self.get_state(), -10.0, True, {
+                "message": "Invalid Move",
+                "player_rewards": {
+                    self.player1_marker: self.reward_for_marker(self.player1_marker, invalid_move=True),
+                    self.player2_marker: self.reward_for_marker(self.player2_marker, invalid_move=True),
+                },
+            } # Penalize invalid moves
 
         # 2. Check game status after the move
         winner = None
@@ -95,8 +113,14 @@ class Game:
         }
         self.history.append(log_entry)
 
-        # Return standard OpenAI Gym
-        return self.get_state(), reward, done, {"winner": winner}
+        # Return standard OpenAI Gym-style values plus per-marker rewards for symmetric learners.
+        return self.get_state(), reward, done, {
+            "winner": winner,
+            "player_rewards": {
+                self.player1_marker: self.reward_for_marker(self.player1_marker, winner),
+                self.player2_marker: self.reward_for_marker(self.player2_marker, winner),
+            },
+        }
 
 
     def play_game_interactive(self):
