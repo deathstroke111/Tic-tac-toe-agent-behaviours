@@ -121,15 +121,33 @@ class TabularTDAgent:
     def update(self, state_key, action, reward, next_state_key, next_legal_actions, next_action=None, done=False):
         key = self._q_key(state_key, action)
         current_value = self.q_values[key]
-        target = self._target_value(reward, next_state_key, next_legal_actions, next_action, done)
+        bootstrap_action = None
+        bootstrap_q_value = 0.0
+
+        if done:
+            target = reward
+        elif self.update_strategy == "sarsa":
+            bootstrap_action = next_action
+            if next_action is not None:
+                bootstrap_q_value = self.q_values[self._q_key(next_state_key, next_action)]
+            target = reward + self.gamma * bootstrap_q_value
+        else:
+            bootstrap_action = self._best_action(next_state_key, next_legal_actions)
+            if bootstrap_action is not None:
+                bootstrap_q_value = self.q_values[self._q_key(next_state_key, bootstrap_action)]
+            target = reward + self.gamma * bootstrap_q_value
+
         self.q_values[key] = current_value + self.alpha * (target - current_value)
         return {
+            "algorithm": self.update_strategy,
             "state_key": list(state_key),
             "action": list(action),
             "reward": reward,
             "next_state_key": list(next_state_key),
             "next_legal_actions": [list(move) for move in next_legal_actions],
             "next_action": list(next_action) if next_action else None,
+            "bootstrap_action": list(bootstrap_action) if bootstrap_action else None,
+            "bootstrap_q_value": bootstrap_q_value,
             "done": done,
             "old_value": current_value,
             "target": target,
@@ -144,6 +162,7 @@ class TabularTDAgent:
         winner = history[-1].get("winner")
         final_state = history[-1]["next_state"]
         final_reward = 0.0 if winner is None else (1.0 if winner == marker else -1.0)
+        result_label = "draw" if winner is None else ("win" if winner == marker else "loss")
         own_turn_indexes = [
             index
             for index, entry in enumerate(history)
@@ -165,23 +184,38 @@ class TabularTDAgent:
                     next_legal_actions=[],
                     done=True,
                 )
-                self.learning_trace.append(update_record)
-                continue
-
-            next_entry = history[own_turn_indexes[position + 1]]
-            next_state_key = board_to_key(next_entry["state_before"])
-            next_legal_actions = empty_cells_from_snapshot(next_entry["state_before"])
-            next_action = tuple(next_entry["action"])
-            update_record = self.update(
-                state_key=state_key,
-                action=action,
-                reward=0.0,
-                next_state_key=next_state_key,
-                next_legal_actions=next_legal_actions,
-                next_action=next_action,
-                done=False,
-            )
+            else:
+                next_entry = history[own_turn_indexes[position + 1]]
+                next_state_key = board_to_key(next_entry["state_before"])
+                next_legal_actions = empty_cells_from_snapshot(next_entry["state_before"])
+                next_action = tuple(next_entry["action"])
+                update_record = self.update(
+                    state_key=state_key,
+                    action=action,
+                    reward=0.0,
+                    next_state_key=next_state_key,
+                    next_legal_actions=next_legal_actions,
+                    next_action=next_action,
+                    done=False,
+                )
+            update_record["turn_index"] = position + 1
+            update_record["player_marker"] = marker
+            update_record["result"] = result_label
+            update_record["board_before"] = [row[:] for row in entry["state_before"]]
+            update_record["board_after"] = [row[:] for row in entry["next_state"]]
             self.learning_trace.append(update_record)
+
+            if position < len(self.game_trace):
+                self.game_trace[position].update(
+                    {
+                        "player_marker": marker,
+                        "board_after": [row[:] for row in entry["next_state"]],
+                        "result": result_label,
+                        "winner_marker": winner,
+                        "learning_reward": update_record["reward"],
+                        "learning_update": update_record,
+                    }
+                )
 
         self.epsilon = max(self.min_epsilon, self.epsilon * self.epsilon_decay)
 

@@ -2,47 +2,23 @@ num_games: 90
 rolling_window: 10
 
 matchups:
-  - label: Q-learning vs Random
-    games: 30
+  - label: Q-learning vs SARSA
+    games: 90
     agent1:
       type: q_learning
       name: qbert
       params:
-        alpha: 0.3
-        gamma: 0.95
-        epsilon: 0.25
-        epsilon_decay: 0.995
-        min_epsilon: 0.02
-    agent2:
-      type: random
-      name: randy
-      params: {}
-
-  - label: SARSA vs Random
-    games: 30
-    agent1:
-      type: sarsa
-      name: sally
-      params:
-        alpha: 0.3
+        alpha: 0.7
         gamma: 0.95
         epsilon: 0.15
         epsilon_decay: 0.995
-        min_epsilon: 0.02
+        min_epsilon: 0.002
     agent2:
-      type: random
-      name: randy
-      params: {}
-
-  - label: MCTS vs Random
-    games: 30
-    agent1:
-      type: mcts
-      name: tom
+      type: sarsa
+      name: sally
       params:
-        simulations: 50
-        simulation_depth: 5
-    agent2:
-      type: random
-      name: randy
-      params: {}
+        alpha: 0.7
+        gamma: 0.95
+        epsilon: 0.15
+        epsilon_decay: 0.995
+        min_epsilon: 0.002
